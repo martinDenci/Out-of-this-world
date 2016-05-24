@@ -21,7 +21,8 @@
 @property (nonatomic, strong) NSString *nickName;
 @property (nonatomic, strong) NSString *intrestFact;
 
-@property (nonatomic, strong) UIImage *image;
+@property (nonatomic, strong) UIImage *spaceImage;
+
 
 -(id)initWithData: (NSDictionary *)data andImage:(UIImage *)image;
 

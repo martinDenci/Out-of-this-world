@@ -7,6 +7,8 @@
 //
 
 #import "MDOuterSpaceTableViewController.h"
+#import "AstronomicalData.h"
+#import "MDSpaceObject.h"
 
 @interface MDOuterSpaceTableViewController ()
 
@@ -16,18 +18,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    NSString *planet1 = @"Merkur";
-    NSString *planet2 = @"Venusa";
-    NSString *planet3 = @"Zem";
-    NSString *planet4 = @"Mars";
-    NSString *planet5 = @"Jupiter";
-    NSString *planet6 = @"Saturn";
-    NSString *planet7 = @"Uran";
-    NSString *planet8 = @"Neptun";
+   
+    self.planets = [[NSMutableArray alloc] init];
     
     
-    self.planets = [[NSMutableArray alloc] initWithObjects: planet1, planet2, planet3, planet4, planet5, planet6, planet7, planet8, nil];
+    for(NSMutableDictionary *planetData in [AstronomicalData allKnownPlanets]) {
+        
+        NSString *imageName = [NSString stringWithFormat:@"%@.jpg", planetData[PLANET_NAME]];
+        MDSpaceObject *spaceObject = [[MDSpaceObject alloc] initWithData:planetData andImage:[UIImage imageNamed:imageName]];
+        [self.planets addObject:spaceObject];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,8 +54,14 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
+    MDSpaceObject *planet = [self.planets objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [self.planets objectAtIndex:indexPath.row];
+    cell.textLabel.text = planet.name;
+    cell.detailTextLabel.text = planet.nickName;
+    cell.imageView.image = planet.spaceImage;
+    cell.backgroundColor = [UIColor clearColor];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.detailTextLabel.textColor = [UIColor colorWithWhite:0.5 alpha:1.0];
     
     return cell;
 }
