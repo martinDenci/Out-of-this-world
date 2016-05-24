@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MDOuterSpaceTableViewController.h
 //  Out of the world
 //
 //  Created by Martin Denci on 23/05/16.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface MDOuterSpaceTableViewController : UITableViewController
 
+@property (nonatomic, strong) NSMutableArray *planets;
 
 @end
-

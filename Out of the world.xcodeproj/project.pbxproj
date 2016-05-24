@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D641EB411CF388A800D9B440 /* MDOuterSpaceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D641EB401CF388A800D9B440 /* MDOuterSpaceTableViewController.m */; };
+		D641EB441CF40A9D00D9B440 /* AstronomicalData.m in Sources */ = {isa = PBXBuildFile; fileRef = D641EB431CF40A9D00D9B440 /* AstronomicalData.m */; };
 		D67E8E431CF3794600351F7A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D67E8E421CF3794600351F7A /* main.m */; };
 		D67E8E461CF3794600351F7A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D67E8E451CF3794600351F7A /* AppDelegate.m */; };
-		D67E8E491CF3794600351F7A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D67E8E481CF3794600351F7A /* ViewController.m */; };
 		D67E8E4C1CF3794600351F7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D67E8E4A1CF3794600351F7A /* Main.storyboard */; };
 		D67E8E4E1CF3794600351F7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D67E8E4D1CF3794600351F7A /* Assets.xcassets */; };
 		D67E8E511CF3794600351F7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D67E8E4F1CF3794600351F7A /* LaunchScreen.storyboard */; };
@@ -35,12 +36,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D641EB3F1CF388A800D9B440 /* MDOuterSpaceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDOuterSpaceTableViewController.h; path = ../MDOuterSpaceTableViewController.h; sourceTree = "<group>"; };
+		D641EB401CF388A800D9B440 /* MDOuterSpaceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDOuterSpaceTableViewController.m; path = ../MDOuterSpaceTableViewController.m; sourceTree = "<group>"; };
+		D641EB421CF40A9D00D9B440 /* AstronomicalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AstronomicalData.h; sourceTree = "<group>"; };
+		D641EB431CF40A9D00D9B440 /* AstronomicalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AstronomicalData.m; sourceTree = "<group>"; };
 		D67E8E3E1CF3794600351F7A /* Out of the world.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Out of the world.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D67E8E421CF3794600351F7A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D67E8E441CF3794600351F7A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D67E8E451CF3794600351F7A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D67E8E471CF3794600351F7A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D67E8E481CF3794600351F7A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D67E8E4B1CF3794600351F7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D67E8E4D1CF3794600351F7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D67E8E501CF3794600351F7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,9 +106,9 @@
 			children = (
 				D67E8E441CF3794600351F7A /* AppDelegate.h */,
 				D67E8E451CF3794600351F7A /* AppDelegate.m */,
-				D67E8E471CF3794600351F7A /* ViewController.h */,
-				D67E8E481CF3794600351F7A /* ViewController.m */,
 				D67E8E4A1CF3794600351F7A /* Main.storyboard */,
+				D641EB3F1CF388A800D9B440 /* MDOuterSpaceTableViewController.h */,
+				D641EB401CF388A800D9B440 /* MDOuterSpaceTableViewController.m */,
 				D67E8E4D1CF3794600351F7A /* Assets.xcassets */,
 				D67E8E4F1CF3794600351F7A /* LaunchScreen.storyboard */,
 				D67E8E521CF3794600351F7A /* Info.plist */,
@@ -117,6 +120,8 @@
 		D67E8E411CF3794600351F7A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D641EB421CF40A9D00D9B440 /* AstronomicalData.h */,
+				D641EB431CF40A9D00D9B440 /* AstronomicalData.m */,
 				D67E8E421CF3794600351F7A /* main.m */,
 			);
 			name = "Supporting Files";
@@ -270,9 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D67E8E491CF3794600351F7A /* ViewController.m in Sources */,
+				D641EB411CF388A800D9B440 /* MDOuterSpaceTableViewController.m in Sources */,
 				D67E8E461CF3794600351F7A /* AppDelegate.m in Sources */,
 				D67E8E431CF3794600351F7A /* main.m in Sources */,
+				D641EB441CF40A9D00D9B440 /* AstronomicalData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +502,7 @@
 				D67E8E6D1CF3794600351F7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D67E8E6E1CF3794600351F7A /* Build configuration list for PBXNativeTarget "Out of the worldTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +511,7 @@
 				D67E8E701CF3794600351F7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D67E8E711CF3794600351F7A /* Build configuration list for PBXNativeTarget "Out of the worldUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +520,7 @@
 				D67E8E731CF3794600351F7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
