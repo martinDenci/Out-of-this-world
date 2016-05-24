@@ -17,8 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.planets = [[NSMutableArray alloc] init];
-    
     NSString *planet1 = @"Merkur";
     NSString *planet2 = @"Venusa";
     NSString *planet3 = @"Zem";
@@ -28,7 +26,8 @@
     NSString *planet7 = @"Uran";
     NSString *planet8 = @"Neptun";
     
-    self.planets = @[planet1, planet2, planet3, planet4, planet5, planet6, planet7, planet8];
+    
+    self.planets = [[NSMutableArray alloc] initWithObjects: planet1, planet2, planet3, planet4, planet5, planet6, planet7, planet8, nil];
 }
 
 - (void)didReceiveMemoryWarning {
