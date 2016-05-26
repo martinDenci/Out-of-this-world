@@ -9,6 +9,9 @@
 #import "MDOuterSpaceTableViewController.h"
 #import "AstronomicalData.h"
 #import "MDSpaceObject.h"
+#import "MDOuterSpaceTableViewController.h"
+#import "MDOuterSpaceImageControllerViewController.h"
+#import "MDOuterSpaceDetailViewController.h"
 
 @interface MDOuterSpaceTableViewController ()
 
@@ -27,6 +30,30 @@
         NSString *imageName = [NSString stringWithFormat:@"%@.jpg", planetData[PLANET_NAME]];
         MDSpaceObject *spaceObject = [[MDSpaceObject alloc] initWithData:planetData andImage:[UIImage imageNamed:imageName]];
         [self.planets addObject:spaceObject];
+    }
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([sender isKindOfClass:[UITableViewCell class]]){
+        if([segue.destinationViewController isKindOfClass:[MDOuterSpaceImageControllerViewController class]]) {
+            
+            MDOuterSpaceImageControllerViewController *nextController = segue.destinationViewController;
+            
+            NSIndexPath *path = [self.tableView indexPathForCell:sender];
+            
+            MDSpaceObject *selectedSpaceObject = self.planets[path.row];
+            nextController.spaceObject = selectedSpaceObject;
+        }
+    }
+    
+    if([sender isKindOfClass:[NSIndexPath class]]){
+        if([segue.destinationViewController isKindOfClass:[MDOuterSpaceDetailViewController class]]){
+            MDOuterSpaceDetailViewController *detailView = segue.destinationViewController;
+            NSIndexPath *path = sender;
+            MDSpaceObject *selectedObject = self.planets[path.row];
+            detailView.spaceObject = selectedObject;
+        }
     }
 }
 
@@ -64,6 +91,15 @@
     cell.detailTextLabel.textColor = [UIColor colorWithWhite:0.5 alpha:1.0];
     
     return cell;
+}
+
+#pragma mark - UiTableViewDelegate
+
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+
+{
+    [self performSegueWithIdentifier:@"push to detail view" sender:indexPath];
+
 }
 
 

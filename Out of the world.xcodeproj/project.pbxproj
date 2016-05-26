@@ -17,6 +17,8 @@
 		D67E8E5C1CF3794600351F7A /* Out_of_the_worldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D67E8E5B1CF3794600351F7A /* Out_of_the_worldTests.m */; };
 		D67E8E671CF3794600351F7A /* Out_of_the_worldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D67E8E661CF3794600351F7A /* Out_of_the_worldUITests.m */; };
 		D6F4DCD31CF4D24300D36072 /* MDSpaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F4DCD21CF4D24300D36072 /* MDSpaceObject.m */; };
+		D6F4DD181CF7110A00D36072 /* MDOuterSpaceImageControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F4DD171CF7110A00D36072 /* MDOuterSpaceImageControllerViewController.m */; };
+		D6F4DD9C1CF759A300D36072 /* MDOuterSpaceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F4DD9B1CF759A300D36072 /* MDOuterSpaceDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,10 @@
 		D67E8E681CF3794600351F7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6F4DCD11CF4D24300D36072 /* MDSpaceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSpaceObject.h; sourceTree = "<group>"; };
 		D6F4DCD21CF4D24300D36072 /* MDSpaceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSpaceObject.m; sourceTree = "<group>"; };
+		D6F4DD161CF7110A00D36072 /* MDOuterSpaceImageControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDOuterSpaceImageControllerViewController.h; sourceTree = "<group>"; };
+		D6F4DD171CF7110A00D36072 /* MDOuterSpaceImageControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDOuterSpaceImageControllerViewController.m; sourceTree = "<group>"; };
+		D6F4DD9A1CF759A300D36072 /* MDOuterSpaceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDOuterSpaceDetailViewController.h; sourceTree = "<group>"; };
+		D6F4DD9B1CF759A300D36072 /* MDOuterSpaceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDOuterSpaceDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,10 @@
 				D67E8E441CF3794600351F7A /* AppDelegate.h */,
 				D67E8E451CF3794600351F7A /* AppDelegate.m */,
 				D67E8E4A1CF3794600351F7A /* Main.storyboard */,
+				D6F4DD9A1CF759A300D36072 /* MDOuterSpaceDetailViewController.h */,
+				D6F4DD9B1CF759A300D36072 /* MDOuterSpaceDetailViewController.m */,
+				D6F4DD161CF7110A00D36072 /* MDOuterSpaceImageControllerViewController.h */,
+				D6F4DD171CF7110A00D36072 /* MDOuterSpaceImageControllerViewController.m */,
 				D641EB3F1CF388A800D9B440 /* MDOuterSpaceTableViewController.h */,
 				D641EB401CF388A800D9B440 /* MDOuterSpaceTableViewController.m */,
 				D6F4DCD11CF4D24300D36072 /* MDSpaceObject.h */,
@@ -280,10 +290,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6F4DD181CF7110A00D36072 /* MDOuterSpaceImageControllerViewController.m in Sources */,
 				D6F4DCD31CF4D24300D36072 /* MDSpaceObject.m in Sources */,
 				D641EB411CF388A800D9B440 /* MDOuterSpaceTableViewController.m in Sources */,
 				D67E8E461CF3794600351F7A /* AppDelegate.m in Sources */,
 				D67E8E431CF3794600351F7A /* main.m in Sources */,
+				D6F4DD9C1CF759A300D36072 /* MDOuterSpaceDetailViewController.m in Sources */,
 				D641EB441CF40A9D00D9B440 /* AstronomicalData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
