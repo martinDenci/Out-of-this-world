@@ -19,6 +19,7 @@
 		D6F4DCD31CF4D24300D36072 /* MDSpaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F4DCD21CF4D24300D36072 /* MDSpaceObject.m */; };
 		D6F4DD181CF7110A00D36072 /* MDOuterSpaceImageControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F4DD171CF7110A00D36072 /* MDOuterSpaceImageControllerViewController.m */; };
 		D6F4DD9C1CF759A300D36072 /* MDOuterSpaceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F4DD9B1CF759A300D36072 /* MDOuterSpaceDetailViewController.m */; };
+		D6F4DD9F1CF993FA00D36072 /* MDAddSpaceObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F4DD9E1CF993FA00D36072 /* MDAddSpaceObjectViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		D6F4DD171CF7110A00D36072 /* MDOuterSpaceImageControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDOuterSpaceImageControllerViewController.m; sourceTree = "<group>"; };
 		D6F4DD9A1CF759A300D36072 /* MDOuterSpaceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDOuterSpaceDetailViewController.h; sourceTree = "<group>"; };
 		D6F4DD9B1CF759A300D36072 /* MDOuterSpaceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDOuterSpaceDetailViewController.m; sourceTree = "<group>"; };
+		D6F4DD9D1CF993FA00D36072 /* MDAddSpaceObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAddSpaceObjectViewController.h; sourceTree = "<group>"; };
+		D6F4DD9E1CF993FA00D36072 /* MDAddSpaceObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAddSpaceObjectViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,8 @@
 				D67E8E441CF3794600351F7A /* AppDelegate.h */,
 				D67E8E451CF3794600351F7A /* AppDelegate.m */,
 				D67E8E4A1CF3794600351F7A /* Main.storyboard */,
+				D6F4DD9D1CF993FA00D36072 /* MDAddSpaceObjectViewController.h */,
+				D6F4DD9E1CF993FA00D36072 /* MDAddSpaceObjectViewController.m */,
 				D6F4DD9A1CF759A300D36072 /* MDOuterSpaceDetailViewController.h */,
 				D6F4DD9B1CF759A300D36072 /* MDOuterSpaceDetailViewController.m */,
 				D6F4DD161CF7110A00D36072 /* MDOuterSpaceImageControllerViewController.h */,
@@ -123,9 +128,9 @@
 				D641EB3F1CF388A800D9B440 /* MDOuterSpaceTableViewController.h */,
 				D641EB401CF388A800D9B440 /* MDOuterSpaceTableViewController.m */,
 				D6F4DCD11CF4D24300D36072 /* MDSpaceObject.h */,
+				D67E8E4F1CF3794600351F7A /* LaunchScreen.storyboard */,
 				D6F4DCD21CF4D24300D36072 /* MDSpaceObject.m */,
 				D67E8E4D1CF3794600351F7A /* Assets.xcassets */,
-				D67E8E4F1CF3794600351F7A /* LaunchScreen.storyboard */,
 				D67E8E521CF3794600351F7A /* Info.plist */,
 				D67E8E411CF3794600351F7A /* Supporting Files */,
 			);
@@ -296,6 +301,7 @@
 				D67E8E461CF3794600351F7A /* AppDelegate.m in Sources */,
 				D67E8E431CF3794600351F7A /* main.m in Sources */,
 				D6F4DD9C1CF759A300D36072 /* MDOuterSpaceDetailViewController.m in Sources */,
+				D6F4DD9F1CF993FA00D36072 /* MDAddSpaceObjectViewController.m in Sources */,
 				D641EB441CF40A9D00D9B440 /* AstronomicalData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

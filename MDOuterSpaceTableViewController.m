@@ -19,12 +19,29 @@
 
 @implementation MDOuterSpaceTableViewController
 
+#pragma mark - Lazy Instantion of Properties
+
+-(NSMutableArray *)planets
+{
+    if(!_planets){
+        _planets = [[NSMutableArray alloc] init];
+    }
+    
+    return _planets;
+}
+
+-(NSMutableArray *)addedSpaceObject
+{
+    if(!_addedSpaceObject){
+        _addedSpaceObject = [[NSMutableArray alloc ]init];
+    }
+    
+    return _addedSpaceObject;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-    self.planets = [[NSMutableArray alloc] init];
-    
-    
     for(NSMutableDictionary *planetData in [AstronomicalData allKnownPlanets]) {
         
         NSString *imageName = [NSString stringWithFormat:@"%@.jpg", planetData[PLANET_NAME]];
@@ -42,7 +59,13 @@
             
             NSIndexPath *path = [self.tableView indexPathForCell:sender];
             
-            MDSpaceObject *selectedSpaceObject = self.planets[path.row];
+            MDSpaceObject *selectedSpaceObject;
+            
+            if(path.section == 0) {
+                selectedSpaceObject = self.planets[path.row];
+            } else if (path.section == 1){
+                selectedSpaceObject = self.addedSpaceObject[path.row];
+            }
             nextController.spaceObject = selectedSpaceObject;
         }
     }
@@ -51,9 +74,21 @@
         if([segue.destinationViewController isKindOfClass:[MDOuterSpaceDetailViewController class]]){
             MDOuterSpaceDetailViewController *detailView = segue.destinationViewController;
             NSIndexPath *path = sender;
-            MDSpaceObject *selectedObject = self.planets[path.row];
+            MDSpaceObject *selectedObject;
+            
+            if(path.section == 0) {
+                selectedObject = self.planets[path.row];
+            } else if (path.section == 1){
+                selectedObject = self.addedSpaceObject[path.row];
+            }
             detailView.spaceObject = selectedObject;
         }
+    }
+    
+    if([segue.destinationViewController isKindOfClass:[MDAddSpaceObjectViewController class]]) {
+        MDAddSpaceObjectViewController *addSpaceObjectVC = segue.destinationViewController;
+        
+        addSpaceObjectVC.delegate  = self;
     }
 }
 
@@ -65,14 +100,21 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 1;
+    
+    if([self.addedSpaceObject count]) {
+        return 2;
+    } else {
+        return 1;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    
-  return [self.planets count];
+   
+    if(section == 1) {
+        return [self.addedSpaceObject count];
+    } else {
+        return [self.planets count];
+    }
     
 }
 
@@ -81,11 +123,23 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    MDSpaceObject *planet = [self.planets objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = planet.name;
-    cell.detailTextLabel.text = planet.nickName;
-    cell.imageView.image = planet.spaceImage;
+    if(indexPath.section == 1) {
+        
+        MDSpaceObject *planet = [self.addedSpaceObject objectAtIndex:indexPath.row];
+        
+        cell.textLabel.text = planet.name;
+        cell.imageView.image = planet.spaceImage;
+                
+    } else {
+    
+      MDSpaceObject *planet = [self.planets objectAtIndex:indexPath.row];
+     
+      cell.textLabel.text = planet.name;
+      cell.detailTextLabel.text = planet.nickName;
+      cell.imageView.image = planet.spaceImage;
+    }
+    
     cell.backgroundColor = [UIColor clearColor];
     cell.textLabel.textColor = [UIColor whiteColor];
     cell.detailTextLabel.textColor = [UIColor colorWithWhite:0.5 alpha:1.0];
@@ -100,6 +154,25 @@
 {
     [self performSegueWithIdentifier:@"push to detail view" sender:indexPath];
 
+}
+
+#pragma mark - MDAddSpaceObjectViewControllerDelegate
+
+-(void)addSpaceObject:(id)spaceObject
+{
+    
+    [self.addedSpaceObject addObject:spaceObject];
+    MDSpaceObject *addedSpaceObject = self.addedSpaceObject[0];
+    NSLog(@"%@", addedSpaceObject.name);
+    
+    NSLog(@"addd");
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.tableView reloadData];
+}
+-(void)cancelSpaceObject
+{
+    NSLog(@"cancel");
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

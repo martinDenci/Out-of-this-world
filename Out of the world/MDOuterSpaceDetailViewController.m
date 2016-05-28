@@ -14,6 +14,7 @@
 
 @implementation MDOuterSpaceDetailViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -37,8 +38,8 @@
     switch(indexPath.row) {
     
         case 0:
-            cell.textLabel.text = @"Nickname";
-            cell.detailTextLabel.text = self.spaceObject.nickName;
+            cell.textLabel.text = @"Name";
+            cell.detailTextLabel.text = self.spaceObject.name;
             break;
         case 1:
             cell.textLabel.text = @"Year Length";
